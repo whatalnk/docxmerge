@@ -11,6 +11,6 @@ docxmerge.exe -t Title.docx -o main.docx Chapter1.docx Chapter2.docx Chapter3.do
 ## Build executable
 
 ```
-dotnet publish -c Release -r win-x64
+dotnet publish -c Release -r win-x64 /p:TrimUnusedDependencies=true
 ```
 

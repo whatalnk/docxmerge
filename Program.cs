@@ -35,13 +35,9 @@ namespace docxmerge
 
       app.OnExecute(() =>
       {
-        // string mainfile = @"main.docx";
-        // string titlefile = @"Title.docx";
-        // var chapters = new List<string> { @"Chapter1.docx", @"Chapter2.docx", @"Chapter3.docx", @"References.docx" };
-        // Because position of last paragraph is not updated while looping
-        // chapters.Reverse();
         var templateFile = optionTemplateFile.Value();
         var outFile = optionOutFile.Value();
+        // Because position of last paragraph is not updated while looping
         var mergedFiles = app.RemainingArguments;
         mergedFiles.Reverse();
         File.Delete(outFile);
